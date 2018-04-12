@@ -1,163 +1,77 @@
 import React from 'react';
 import './App.css';
-import {menuList} from '../menuList/menuList';
+import {MenuList} from '../MenuList/MenuList';
+import {NavList} from '../NavList/NavList';
+import wholeMenu from '../MenuList/Appetizers';
 
 export class App extends React.Component {
+  constructor(props){
+    super(props);
+
+  /*  const Appetizers =  {
+      'name': 'Salmon Sushi NEW',
+      'price': '$10',
+      'description': "blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, ",
+      'thumbnails': 'https://goo.gl/pYpNpC'
+    };//end menu Items*/
+
+    /*const menuList = {
+      "Appetizers": Appetizers,
+      "Salads": Salads
+    };*/
+
+    const navItems = [
+      "Appetizers",
+      "Salads",
+      "Soup & Hot Pots",
+      "Sashimi",
+      "Nigiri Sushi",
+      "Tempura",
+      "Special Rolls",
+      "Maki (roll)",
+      "Temeki (cone)",
+      "Sushi Combo",
+      "Sushi Rice Bowl",
+      "Japanese Curry",
+      "Donburi (Rice bowl)",
+      "Chaahan",
+      "Noodle Soup",
+      "Yaki Udon / Noodle",
+      "Deep Fried",
+      "Bento Box",
+      "Entrees",
+      "Set Dinner Platters",
+      "Party Tray"
+    ];
+
+    this.state = {
+      "menuItems" : wholeMenu,
+      "navList" : navItems
+    };//end this.state
+
+    console.log('this.state.menuItems= '+this.state.menuItems.Appetizers);
+    console.log('Object.keys(this.state.menuItems =' + Object.keys(wholeMenu[0]));
+  }
+
   render() {
     return (
       <div className="main-container">
-        <div className="orderedList">
-          <h1>Order List</h1>
-          <div className="orderedItem">name, qty, price, options, name, qty, price, options, name, qty, price, options, </div>
-          <div className="orderedItem">name, qty, price, options</div>
-          <div className="orderedItem">name, qty, price, options</div>
-          <button type="button">Order</button>
-        </div>
         <h1>Soleilki Japanese Fusion</h1>
-
-
-
-        <div className="nav-container">
-          <ul className="navList">
-            <li><div>fooddddddddddddddd</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>fooddddddddddddd</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>fooddddddddddddddd</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>fooddddddddddddd</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-            <li><div>food</div></li>
-
-          </ul>
-        </div>
-
-
+        <NavList navItems={this.state.navList} />
         <div className="menuAndOrder-container">
-
-          <div className="menuList-container">
-
-            <div className="menuItem">
-              <div className="pic"><img src={'https://goo.gl/pYpNpC'} alt="Salmon"/></div>
-              <h2>Salmon Sushi</h2>
-              <h3>$99.99</h3>
-              <a>this is a description, blah, blah, blah, blah, blah, blah, blah, blah, blah</a>
-              <div className="addButton">Add to Order</div>
-            </div>
-
-            <div className="menuItem">
-              <div className="pic"><img src={'https://goo.gl/pYpNpC'} alt="Salmon"/></div>
-              <h2>Salmon Sushi</h2>
-              <h3>$99.99</h3>
-              <a>this is a description, blah, blah, blah, blah, blah, blah, blah, blah, blah</a>
-              <div className="addButton">Add to Order</div>
-            </div>
-
-            <div className="menuItem">
-              <div className="pic"><img src={'https://goo.gl/pYpNpC'} alt="Salmon"/></div>
-              <h2>Salmon Sushi</h2>
-              <h3>$99.99</h3>
-              <a>this is a description, blah, blah, blah, blah, blah, blah, blah, blah, blah</a>
-              <div className="addButton">Add to Order</div>
-            </div>
-
-            <div className="menuItem">
-              <div className="pic"><img src={'https://goo.gl/pYpNpC'} alt="Salmon"/></div>
-              <h2>Salmon Sushi</h2>
-              <h3>$99.99</h3>
-              <a>this is a description, blah, blah, blah, blah, blah, blah, blah, blah, blah</a>
-              <div className="addButton">Add to Order</div>
-            </div>
-
-            <div className="menuItem">
-              <div className="pic"><img src={'https://goo.gl/pYpNpC'} alt="Salmon"/></div>
-              <h2>Salmon Sushi</h2>
-              <h3>$99.99</h3>
-              <a>this is a description, blah, blah, blah, blah, blah, blah, blah, blah, blah</a>
-              <div className="addButton">Add to Order</div>
-            </div>
-
-            <div className="menuItem">
-              <div className="pic"><img src={'https://goo.gl/pYpNpC'} alt="Salmon"/></div>
-              <h2>Salmon Sushi</h2>
-              <h3>$99.99</h3>
-              <a>this is a description, blah, blah, blah, blah, blah, blah, blah, blah, blah</a>
-              <div className="addButton">Add to Order</div>
-            </div>
-
-            <div className="menuItem">
-              <div className="pic"><img src={'https://goo.gl/pYpNpC'} alt="Salmon"/></div>
-              <h2>Salmon Sushi</h2>
-              <h3>$99.99</h3>
-              <a>this is a description, blah, blah, blah, blah, blah, blah, blah, blah, blah</a>
-              <div className="addButton">Add to Order</div>
-            </div>
-
-            <div className="menuItem">
-              <div className="pic"><img src={'https://goo.gl/pYpNpC'} alt="Salmon"/></div>
-              <h2>Salmon Sushi</h2>
-              <h3>$99.99</h3>
-              <a>this is a description, blah, blah, blah, blah, blah, blah, blah, blah, blah</a>
-              <div className="addButton">Add to Order</div>
-            </div>
-
-            <div className="menuItem">
-              <div className="pic"><img src={'https://goo.gl/pYpNpC'} alt="Salmon"/></div>
-              <h2>Salmon Sushi</h2>
-              <h3>$99.99</h3>
-              <a>this is a description, blah, blah, blah, blah, blah, blah, blah, blah, blah</a>
-              <div className="addButton">Add to Order</div>
-            </div>
-
-            <div className="menuItem">
-              <div className="pic"><img src={'https://goo.gl/pYpNpC'} alt="Salmon"/></div>
-              <h2>Salmon Sushi</h2>
-              <h3>$99.99</h3>
-              <a>this is a description, blah, blah, blah, blah, blah, blah, blah, blah, blah</a>
-              <div className="addButton">Add to Order</div>
-            </div>
-
-            <div className="menuItem">
-              <div className="pic"><img src={'https://goo.gl/pYpNpC'} alt="Salmon"/></div>
-              <h2>Salmon Sushi</h2>
-              <h3>$99.99</h3>
-              <a>this is a description, blah, blah, blah, blah, blah, blah, blah, blah, blah</a>
-              <div className="addButton">Add to Order</div>
-            </div>
-
-          </div>
+          <MenuList menuItems={this.state.menuItems} />
         </div>
-
-
-        {/*<div className="popUp">
-          <div className="popUp-pic">pic</div>
-          <div className="popUp-name">name</div>
-          <div className="popUp-price">$99.99</div>
-          <div className="popUp-description"></div>
-          <div className="popUp-addButton">+</div>
-          <div className="popUp-option"><ul><li>1</li></ul></div>
-          </div>
-          */}
-
           <div className="footer">
             Restaurant ordering system by Ricky Chan.
           </div>
 
+          <div className="orderedList">
+            <h1>Order List</h1>
+            <div className="orderedItem">name, qty, price, options, name, qty, price, options, name, qty, price, options, </div>
+            <div className="orderedItem">name, qty, price, options</div>
+            <div className="orderedItem">name, qty, price, options</div>
+            <button type="button">Order</button>
+          </div>
         </div>
       );
     }

@@ -7,104 +7,17 @@ div {
   border-style: none;
 }
 
-ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0px;
-  margin:20px;
-  border-bottom: 1px solid gray;
-}
-
-li {
-  flex:1;
-  padding:4px;
-}
-
-li div{
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #003399;
-  color: white;
-  box-shadow: 0px 0px 8px #888888;
-  border-style: none;
-}
-
 h1{
     text-align: center;
     margin:3px;
     padding: none;
 }
 
-.nav-container{
-    background-color: white;
-    position: sticky;
-    top: 0;
-}
-
-.navList {
-  text-align: center;
-  vertical-align: middle;
-  padding: 5px;
-  margin:10px;
-}
-
-.navList div{
-  padding: 15px;
-}
-
 .menuAndOrder-container{ /*center contents*/
   display: flex;
   flex-direction:row;
   min-height: 90%;
-
-
 }
-
-.menuList-container{
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex: 4;
-}
-
-.menuItem{
-  width: 28%; /*biggest size*/
-  height: auto;
-  margin:10px;
-  margin-bottom: 5px;
-  padding: 15px;
-  box-shadow: 0px 1px 15px #888888;
-}
-
-.menuItem img{
-  float:left;
-  width:100%;
-  object-fit:cover;
-}
-
-.menuItem h2{
-  color: black;
-  font-size: 16pt;
-  margin: 0px;
-}
-
-.menuItem h3{
-  font-size: 12pt;
-  margin: 0px;
-}
-
-.addButton{
-  text-align: center;
-  color: orange;
-  padding: 5px;
-  margin-top: 5px;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 2px 2px 8px #888888;
-  }
 
 .orderedList{
   position: fixed;
