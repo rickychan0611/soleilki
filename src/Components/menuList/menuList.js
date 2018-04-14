@@ -3,6 +3,7 @@ import './MenuList.css';
 import {MenuItem} from '../MenuItem/MenuItem';
 
 export class MenuList extends React.Component {
+
   render() {
     return (
       <div>
@@ -13,10 +14,10 @@ export class MenuList extends React.Component {
               <div  className="menuList-container">
               {this.props.menuItems[title].map(menuItem  => {
                 return <MenuItem
-                  thumbnails={menuItem.field.thumbnails}
-                  name={menuItem.field.name}
-                  price={menuItem.field.price}
-                  description={menuItem.field.description}/>
+                  menuItem={menuItem}
+                  
+                  onAdd={this.props.onAdd}
+                  />
               })
             }
           </div>

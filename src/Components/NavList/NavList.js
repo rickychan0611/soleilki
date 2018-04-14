@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavList.css';
 import {App} from '../App/App';
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 export class NavList extends React.Component {
   render(){
