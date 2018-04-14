@@ -6,7 +6,7 @@ export class MenuItem extends React.Component {
   render(){
     return (
       <div className="menuItem">
-        <div className="thumbnails-container"><a href=""><img class="thumbnails" src={this.props.thumbnails} /></a></div>
+        <div className="thumbnails-container"><a><img class="thumbnails" src={this.props.thumbnails} /></a></div>
         <h2>{this.props.name}</h2>
         <h3>{this.props.price}</h3>
         <a>{this.props.description}</a>
