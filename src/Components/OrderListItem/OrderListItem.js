@@ -17,9 +17,15 @@ export class OrderListItem extends React.Component {
       <div className="item">
         <div className="item-information">
           <h3>{this.props.item.field.name}</h3>
-          <p>{this.props.item.field.price}</p>
+          <p>x {this.props.item.field.qty}</p>
+
         </div>
-        <button className="Track-action" onClick={this.removeItem}>remove</button>
+        <div className="item-button">
+        <button onClick={this.editItem}>Edit</button>
+        <button onClick={this.removeItem}>remove</button>
+
+        <hr></hr>
+        </div>
       </div>
     );
   }

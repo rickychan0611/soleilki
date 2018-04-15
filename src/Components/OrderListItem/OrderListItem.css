@@ -1,0 +1,17 @@
+.item-information p {
+  margin: 0;
+}
+
+.item-information h3 {
+  margin: 0;
+  padding:3px;
+}
+
+.item-button{
+  text-align:right;
+  width: 100%;
+}
+.item-button button{
+  margin-left: 5px;
+  padding: 10px;
+}

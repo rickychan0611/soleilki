@@ -18,6 +18,8 @@ export class App extends React.Component {
     };//end this.state
     this.addItemToOrderList=this.addItemToOrderList.bind(this);
     this.checkOrder=this.checkOrder.bind(this);
+    this.removeItem=this.removeItem.bind(this);
+    this.removeAll=this.removeAll.bind(this);
   }
 
 
@@ -36,11 +38,29 @@ addItemToOrderList(item){
   }
 }
 
+removeItem(item){
+  const a = this.state.orderListItems;
+  console.log('move item:'+ a);
+  let filteredList = a.filter(a => {
+    return a.id !== item.id;
+  });
+  this.setState({orderListItems: filteredList})
+}
+
+removeAll(){
+  const removeAll = [];
+  this.setState({orderListItems: removeAll})
+}
+
 checkOrder(){
   const check = this.state.orderListItems;
 console.log('checked' + this.state.orderListItems);
 if (check.length){
-  return <div><OrderList menuItems={this.state.orderListItems} /></div>;
+  return <div><OrderList
+    menuItems={this.state.orderListItems}
+    onRemove={this.removeItem}
+    onRemoveAll={this.removeAll}
+     /></div>;
 }
 
 }
@@ -60,7 +80,7 @@ if (check.length){
         <div className="orderedList">
           <h1>Order List</h1>
           {this.checkOrder()}
-          <button type="button">Order</button>
+
         </div>
 
 
